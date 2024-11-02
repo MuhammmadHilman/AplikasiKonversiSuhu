@@ -62,7 +62,7 @@ public class AplikasiKonversiSuhu extends javax.swing.JFrame {
         } else if (radio_reamur.isSelected()) {
             tujuan = "Reaumur";
         } else {
-            txt_hasil.setText("Silakan pilih satuan tujuan.");
+            txt_hasil.setText("Silakan Pilih Suhu.");
             return;
         }
 
@@ -134,6 +134,7 @@ public class AplikasiKonversiSuhu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Aplikasi Konversi Suhu", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
         jLabel1.setText("Masukkan Suhu");
