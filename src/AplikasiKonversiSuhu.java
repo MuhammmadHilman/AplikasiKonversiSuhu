@@ -13,28 +13,31 @@ public class AplikasiKonversiSuhu extends javax.swing.JFrame {
     public AplikasiKonversiSuhu() {
         initComponents();
         txt_suhu.getDocument().addDocumentListener(new DocumentListener() {
-        @Override
-        public void insertUpdate(DocumentEvent e) {
-            konversiSuhu();
-        }
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                konversiSuhu();
+            }
 
-        @Override
-        public void removeUpdate(DocumentEvent e) {
-            konversiSuhu();
-        }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                konversiSuhu();
+            }
 
-        @Override
-        public void changedUpdate(DocumentEvent e) {
-            konversiSuhu();
-        }
-    });
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                konversiSuhu();
+            }
+        });
+
+        // Add action listeners to radio buttons and combo box for real-time conversion on selection change
         radio_celcius.addActionListener(e -> konversiSuhu());
         radio_fahrenheit.addActionListener(e -> konversiSuhu());
         radio_reamur.addActionListener(e -> konversiSuhu());
         radio_kelvin.addActionListener(e -> konversiSuhu());
-        
-        // Add action listener to combo box
         combo_asal.addActionListener(e -> konversiSuhu());
+        
+        btn_konversi.addActionListener(e -> konversiSuhu());
+        
     }
     
     private void konversiSuhu() {
